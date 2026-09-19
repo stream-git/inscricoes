@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-PT"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscrição — A MELANCOLIA NO TEU DESIGN</title>
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;font-family:-apple-system,Segoe UI,Calibri,Arial,sans-serif;background:#F6F3EE;color:#2b2b2b;padding:28px 14px}
+ .wrap{max-width:680px;margin:0 auto}
+ .card{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(60,40,10,.13);overflow:hidden}
+ .hero{background:linear-gradient(135deg,#FF7A00 0%,#FFB347 100%);color:#fff;padding:30px 30px 26px;position:relative}
+ .hero .tag{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.92;font-weight:700}
+ .hero h1{margin:8px 0 6px;font-size:23px;line-height:1.25}
+ .hero .meta{font-size:14px;opacity:.95}
+ .body{padding:26px 30px 30px}
+ .sec{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#FF7A00;font-weight:800;margin:24px 0 2px;border-top:1px solid #F0EDE8;padding-top:18px}
+ .sec:first-child{border-top:0;padding-top:0;margin-top:0}
+ .intro{font-size:14.5px;color:#55534e;margin:0 0 8px;line-height:1.55}
+ .intro b{color:#3a3a38}
+ label.f{display:block;font-size:13.5px;font-weight:700;color:#40403f;margin:15px 0 6px}
+ .h{font-weight:400;color:#9b9b9b;font-size:12px}
+ input[type=text],input[type=email],input[type=tel],input[type=date],input[type=file],select,textarea{
+   width:100%;background:#F8F7F5;border:1px solid #E6E2DB;border-radius:11px;padding:12px 13px;font-size:15px;font-family:inherit;color:#2b2b2b}
+ input:focus,textarea:focus,select:focus{outline:none;border-color:#FF7A00;background:#fff;box-shadow:0 0 0 3px rgba(255,122,0,.14)}
+ textarea{min-height:74px;resize:vertical}
+ .opts{display:flex;gap:10px;flex-wrap:wrap}
+ .opt{display:flex;align-items:center;gap:8px;background:#F8F7F5;border:1px solid #E6E2DB;border-radius:11px;padding:11px 15px;cursor:pointer;font-size:14.5px}
+ .opt input{width:auto;accent-color:#FF7A00}
+ .preq{background:#FFF7EF;border:1px solid #FFE2C2;border-radius:12px;padding:16px 16px 10px;margin-top:18px}
+ .preq label.f{margin-top:0}
+ button{width:100%;margin-top:26px;background:linear-gradient(135deg,#1DB954,#139A44);color:#fff;border:0;border-radius:13px;padding:15px;font-size:16px;font-weight:800;cursor:pointer;letter-spacing:.3px}
+ button:hover{filter:brightness(1.05)}
+ .note{font-size:12px;color:#a6a196;text-align:center;margin:14px 0 0}
+ .sig{text-align:center;margin-top:22px;font-size:13px;color:#8a857b}
+ .sig b{color:#FF7A00}
+</style></head><body>
+<div class="wrap"><div class="card">
+ <div class="hero">
+   <div class="tag">Human Design · Ana Sá</div>
+   <h1>Inscrição — A MELANCOLIA NO TEU DESIGN</h1>
+   <div class="meta">Workshop · 11 de Outubro 2026 &nbsp;·&nbsp; Presencial (Porto) ou Online</div>
+ </div>
+ <div class="body">
+  <p class="intro"><b>Parabéns por dares mais um passo em direção ao teu verdadeiro SER!</b><br>Bem-vindo(a) a esta nova aventura.<br><br><b>SOBRE O WORKSHOP…</b><br><i>A Melancolia no Teu Design é um workshop para quem quer compreender, à luz do seu Design, a melancolia que o acompanha — e aprender com ela.</i><br>E se a tristeza não tivesse motivo? E se soubesses exactamente, pelo teu Design, qual é a melancolia que te afecta — e como ligar com isso? Vamos perceber de onde ela vem e como lidar com ela, em vez de a combater. Vamos?<br><br><b>Critério de admissão:</b> teres realizado a tua Análise Inicial com um analista certificado.</p>
+  <form method="post" action="/api/inscricao" enctype="multipart/form-data">
+   <input type="hidden" name="evento" value="A MELANCOLIA NO TEU DESIGN">
+   <div class="sec">Dados pessoais</div>
+   <label class="f">1. Nome completo</label><input type="text" name="nome" required>
+   <label class="f">2. Email</label><input type="email" name="email" required>
+   <label class="f">3. Telefone</label><input type="tel" name="telefone" placeholder="+351 900 000 000">
+   <label class="f">4. Em que formato pretende participar?</label>
+   <div class="opts"><label class="opt"><input type="radio" name="formato" value="Presencial">Presencial</label>
+   <label class="opt"><input type="radio" name="formato" value="Online">Online</label></div>
+   <label class="f">5. Data de Nascimento</label><input type="date" name="nascimento">
+   <label class="f">6. Hora de Nascimento <span class="h">(com exactidão)</span></label><input type="text" name="hora">
+   <label class="f">7. Local de Nascimento <span class="h">(País e Localidade)</span></label><input type="text" name="local" placeholder="Ex: Porto, Portugal">
+
+   <div class="preq"><label class="f">8. Pré-requisito</label>
+     <div style="font-size:14.5px;margin:2px 0 8px"><b>Fez a Análise Inicial?</b> &nbsp;<span class='h'>(desejável: já ter feito o Workshop Viver o Teu Ser)</span></div>
+     <div class="opts"><label class="opt"><input type="radio" name="prereq" value="Sim">Sim</label>
+     <label class="opt"><input type="radio" name="prereq" value="Não">Não</label></div></div>
+
+   <label class="f">9. Nome do analista / datas <span class="h">(mês e ano)</span></label><input type="text" name="analista" placeholder="Ex: Ana Sá, Março 2026">
+
+   <div class="sec">O teu percurso</div>
+   <label class="f">10. Tens ouvido a tua gravação e seguido as indicações?</label>
+   <div class="opts"><label class="opt"><input type="radio" name="gravacao" value="Sim">Sim</label><label class="opt"><input type="radio" name="gravacao" value="Não">Não</label></div>
+   <label class="f">11. Qual a tua motivação para participar?</label><textarea name="motivacao"></textarea>
+   <label class="f">12. Que cursos da Formação Base já frequentaste?</label><textarea name="formacao_base"></textarea>
+   <label class="f">13. Se sim — quando e com quem?</label><input type="text" name="base_quando" placeholder="Ex: Setembro 2025 com Ana Sá">
+   <label class="f">14. Já frequentaste algum curso da Formação Profissional (PTL1, PTL2…)?</label>
+   <div class="opts"><label class="opt"><input type="radio" name="prof" value="Sim">Sim</label><label class="opt"><input type="radio" name="prof" value="Não">Não</label></div>
+   <label class="f">15. Se sim — qual/quais, onde e com quem?</label><input type="text" name="prof_quais" placeholder="Ex: PTL1 no Porto">
+
+   <div class="sec">Finalizar</div>
+   <label class="f">16. Comprovativo de pagamento <span class="h">(upload)</span></label><input type="file" name="comprovativo">
+   <label class="f">17. Comentário adicional</label><textarea name="comentario"></textarea>
+
+   <button type="submit">Enviar inscrição</button>
+   <p class="note">Os teus dados são tratados com confidencialidade (RGPD).</p>
+  </form>
+  <div class="sig">✨ <b>Vem conhecer o teu verdadeiro Ser</b> · Ana Sá</div>
+ </div>
+</div></div>
+</body></html>
