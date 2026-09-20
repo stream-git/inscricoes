@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-PT"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar na Mailing List — Humanos por Design</title>
+<style>
+ *{box-sizing:border-box}
+ body{margin:0;font-family:-apple-system,Segoe UI,Calibri,Arial,sans-serif;background:#F6F3EE;color:#2b2b2b;padding:28px 14px}
+ .wrap{max-width:620px;margin:0 auto}
+ .card{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(60,40,10,.13);overflow:hidden}
+ .hero{background:linear-gradient(135deg,#FF7A00 0%,#FFB347 100%);color:#fff;padding:30px 30px 26px}
+ .hero .tag{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.92;font-weight:700}
+ .hero h1{margin:8px 0 6px;font-size:23px;line-height:1.25}
+ .hero .meta{font-size:14px;opacity:.95}
+ .body{padding:26px 30px 30px}
+ .intro{font-size:14.5px;color:#55534e;margin:0 0 6px;line-height:1.55}
+ .intro b{color:#3a3a38}
+ label.f{display:block;font-size:13.5px;font-weight:700;color:#40403f;margin:16px 0 6px}
+ .h{font-weight:400;color:#9b9b9b;font-size:12px}
+ input{width:100%;background:#F8F7F5;border:1px solid #E6E2DB;border-radius:11px;padding:12px 13px;font-size:15px;font-family:inherit;color:#2b2b2b}
+ input:focus{outline:none;border-color:#FF7A00;background:#fff;box-shadow:0 0 0 3px rgba(255,122,0,.14)}
+ button{width:100%;margin-top:24px;background:linear-gradient(135deg,#1DB954,#139A44);color:#fff;border:0;border-radius:13px;padding:15px;font-size:16px;font-weight:800;cursor:pointer}
+ button:hover{filter:brightness(1.05)}
+ .note{font-size:12px;color:#a6a196;text-align:center;margin:14px 0 0}
+ .sig{text-align:center;margin-top:22px;font-size:13px;color:#8a857b}
+ .sig b{color:#FF7A00}
+ .ok{display:none;text-align:center;padding:10px 0 4px;font-size:15px;color:#139A44;font-weight:700}
+</style></head><body>
+<div class="wrap"><div class="card">
+ <div class="hero">
+   <div class="tag">Humanos por Design · Ana Sá</div>
+   <h1>Entrar na Mailing List</h1>
+   <div class="meta">Energia da semana · Portas do Sol</div>
+ </div>
+ <div class="body">
+  <p class="intro">Recebe todas as semanas a <b>Energia da semana</b> (as Portas do Sol), trânsitos e informação útil — no teu email. Deixa os teus dados abaixo. 💛</p>
+  <form method="post" action="/api/inscricao" enctype="multipart/form-data" onsubmit="return agradecer()">
+   <input type="hidden" name="evento" value="Mailing List — Energia da semana">
+   <label class="f">1. Nome</label><input type="text" name="nome" required>
+   <label class="f">2. Email</label><input type="email" name="email" required>
+   <label class="f">3. Telefone</label><input type="tel" name="telefone" required>
+   <button type="submit">Quero receber ⚡</button>
+   <p class="note">Os teus dados são tratados com confidencialidade (RGPD).</p>
+  </form>
+  <div class="ok" id="ok">Obrigada! 💛 O teu pedido foi enviado.</div>
+  <div class="sig">✨ <b>Vem conhecer o teu verdadeiro Ser</b> · Ana Sá</div>
+ </div>
+</div></div>
+<script>
+function agradecer(){ var o=document.getElementById('ok'); o.style.display='block'; o.scrollIntoView({block:'center'}); return true; }
+</script>
+</body></html>
